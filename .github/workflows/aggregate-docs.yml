@@ -28,7 +28,7 @@ jobs:
           fetch-depth: 0 # Fetches all history, good for some git operations
 
       - name: Run Mintlify multirepo action
-        uses: mintlify/mintlify-multirepo-action@v0.16 # Using the action name and version from the example
+        uses: mintlify/multirepo-action@v0.16 # Using the action name and version from the example
         with:
           token: ${{ secrets.mlfy }} # Your secret name
           target-branch: docs-compiled # Your target branch name
