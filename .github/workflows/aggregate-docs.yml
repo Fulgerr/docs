@@ -4,38 +4,43 @@ on:
   push:
     branches:
       - main # Trigger on push to the main branch of Fulgerr/docs
+  schedule: # Optional: As per the example, runs daily at midnight UTC
+    - cron: '0 0 * * *'
   workflow_dispatch: # Allows manual triggering
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: aggregate-mintlify-docs # As per the example
   cancel-in-progress: true
 
 jobs:
   aggregate-docs:
     runs-on: ubuntu-latest
-    name: Aggregate Mintlify Docs
+    name: Aggregate Mintlify Docs # Changed to match your casing preference for titles
 
     steps:
-      - name: Checkout base repo (Fulgerr/docs)
+      - name: Clone base repo (Fulgerr/docs)
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.mlfy }} # Uses your secret named 'mlfy'
-          fetch-depth: 0
-
-      - name: Run Mintlify Multirepo Action
-        uses: mintlify/multirepo-action@v1 # Using v1, check for newer versions if available
-        with:
+          # The token is needed by the checkout step if you need to fetch submodules
+          # or if the mintlify action itself doesn't handle the final push adequately.
+          # Given the action pushes, it's good practice for checkout to also have it.
           token: ${{ secrets.mlfy }}
+          fetch-depth: 0 # Fetches all history, good for some git operations
+
+      - name: Run Mintlify multirepo action
+        uses: mintlify/mintlify-multirepo-action@v0.15 # Using the action name and version from the example
+        with:
+          token: ${{ secrets.mlfy }} # Your secret name
+          target-branch: docs-compiled # Your target branch name
+
+          # Path to the directory containing docs.json in THIS (Fulgerr/docs) repository.
+          # Since your docs.json is at the root, we use '.'
+          subdirectory: .
+
           repos: |
             - owner: Fulgerr
               repo: docsA
-              ref: main # Or the branch you want to pull from in docsA
-              # docs.json is at the root of Fulgerr/docsA, so subdirectory is empty or omitted
+              ref: main # Or the specific branch you want from docsA
+              # Path within Fulgerr/docsA to its docs.json.
+              # Since it's at the root of docsA, this is empty.
               subdirectory: ''
-
-          target-branch: docs-compiled # Branch in Fulgerr/docs where combined docs will be pushed
-
-          # docs.json is at the root of Fulgerr/docs, so base-subdirectory is empty or omitted
-          base-subdirectory: ''
-
-          force: true
