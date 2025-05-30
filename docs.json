@@ -35,6 +35,22 @@
         ]
       },
       {
+        "tab": "Docs A",
+        "groups": [
+          {
+            "group": "Introduction to A",
+            "pages": [
+              "docsA/index"
+            ]
+          },
+          {
+            "group": "Other Topics in A",
+            "pages": [
+            ]
+          }
+        ]
+      },
+      {
         "tab": "API Reference",
         "groups": [
           {
