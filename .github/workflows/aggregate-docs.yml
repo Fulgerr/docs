@@ -1,0 +1,40 @@
+name: Aggregate Mintlify Docs
+
+on:
+  push:
+    branches:
+      - main # Or your default branch for the base repo
+  workflow_dispatch:
+
+concurrency:
+  group: aggregate-mintlify-docs
+  cancel-in-progress: true
+
+jobs:
+  aggregate-docs:
+    runs-on: ubuntu-latest
+    name: Aggregate Mintlify Docs
+
+    steps:
+      - name: Clone base repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Mintlify Multirepo Action
+        uses: mintlify/multirepo-action@v1 # Check for the latest version
+        with:
+          token: ${{ secrets.mlfy }}
+          repos: |
+            - owner: Fulgerr
+              repo: docs
+              ref: main
+              # Path to the DIRECTORY containing mint.config.json in Repo A
+              subdirectory: docs # e.g., 'docs' or empty if root
+            - owner: Fulgerr
+              repo: docsA
+              ref: main
+              # Path to the DIRECTORY containing mint.config.json in Repo B
+              subdirectory: '' # e.g., empty if root
+          target-branch: docs-compiled
+          force: true
