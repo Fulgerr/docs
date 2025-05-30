@@ -3,11 +3,11 @@ name: Aggregate Mintlify Docs
 on:
   push:
     branches:
-      - main # Or your default branch for the base repo
-  workflow_dispatch:
+      - main # Trigger on push to the main branch of Fulgerr/docs
+  workflow_dispatch: # Allows manual triggering
 
 concurrency:
-  group: aggregate-mintlify-docs
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -16,25 +16,26 @@ jobs:
     name: Aggregate Mintlify Docs
 
     steps:
-      - name: Clone base repo
+      - name: Checkout base repo (Fulgerr/docs)
         uses: actions/checkout@v4
         with:
+          token: ${{ secrets.mlfy }} # Uses your secret named 'mlfy'
           fetch-depth: 0
 
       - name: Run Mintlify Multirepo Action
-        uses: mintlify/multirepo-action@v1 # Check for the latest version
+        uses: mintlify/multirepo-action@v1 # Using v1, check for newer versions if available
         with:
           token: ${{ secrets.mlfy }}
           repos: |
             - owner: Fulgerr
-              repo: docs
-              ref: main
-              # Path to the DIRECTORY containing mint.config.json in Repo A
-              subdirectory: docs # e.g., 'docs' or empty if root
-            - owner: Fulgerr
               repo: docsA
-              ref: main
-              # Path to the DIRECTORY containing mint.config.json in Repo B
-              subdirectory: '' # e.g., empty if root
-          target-branch: docs-compiled
+              ref: main # Or the branch you want to pull from in docsA
+              # docs.json is at the root of Fulgerr/docsA, so subdirectory is empty or omitted
+              subdirectory: ''
+
+          target-branch: docs-compiled # Branch in Fulgerr/docs where combined docs will be pushed
+
+          # docs.json is at the root of Fulgerr/docs, so base-subdirectory is empty or omitted
+          base-subdirectory: ''
+
           force: true
