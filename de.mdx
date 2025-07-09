@@ -1,7 +1,6 @@
 ---
 mode: "custom"
 title: "UiPath Docs"
-sidebarTitle: "Welcome"
 ---
 
 export function openSearch() {
@@ -10,7 +9,7 @@ export function openSearch() {
 
 <div className="relative w-full flex items-center justify-center" style={{ height: '28rem', overflow: 'hidden' }}>
 
-  <div id="background-div" className="bg-[#E3F0F4] absolute inset-0 h-[30rem] bg-cover bg-no-repeat dark:hidden" style={{
+ <div id="background-div" className="bg-[#E3F0F4] absolute inset-0 h-[30rem] bg-cover bg-no-repeat dark:hidden" style={{
     backgroundImage: "url(https://mintlify-assets.b-cdn.net/ui-path-squares.png)",
     backgroundPosition: "center"
   }}></div>
@@ -30,10 +29,10 @@ export function openSearch() {
           textAlign: 'center',
       }}
     >
-      <span style={{color: "#0b9faf"}}>Welcome</span> to <span style={{color: "#fa4616"}}>UiPath</span> docs!
+    <span style={{color: "#0b9faf"}}>Willkommen</span> bei <span style={{color: "#fa4616"}}>UiPath</span> docs!
 
     </h1>
-    <p className="mt-2 dark:text-white text-gray-900 text-xl" style={{fontWeight: 500, maxWidth: '80%', margin: '0 auto' }}>Hello, How can we help you today?</p>
+    <p className="mt-2 dark:text-white text-gray-900 text-xl" style={{fontWeight: 500, maxWidth: '80%', margin: '0 auto' }}>Hallo, wie können wir Ihnen heute helfen?</p>
     <div className="flex items-center justify-center" style={{ maxWidth: '800px', margin: '0 auto' }}>
     <button
       type="button"
@@ -70,47 +69,55 @@ export function openSearch() {
   marginRight: 'auto', paddingLeft: '1.25rem',
   paddingRight: '1.25rem' }}
 >
-<p className="text-gray-900 dark:text-white mb-2" style={{ fontSize: '2rem', fontWeight: '600'}}>Platform</p>
+<p className="text-gray-900 dark:text-white mb-10 mt-8" style={{ fontSize: '2rem', fontWeight: '600'}}>Platform</p>
 
-<CardGroup cols={3}>
-  <Card title="Overview" icon="globe" href="/overview/other/latest" horizontal>
-    Cross-product reference information
+<CardGroup cols={4}>
+  <Card title="Überblick" icon="globe" href="/de/overview/other/latest" horizontal>
+    Produktübergreifende Referenzinformationen
   </Card>
   <Card title="Automation Cloud™" icon="cloud" href="https://docs.uipath.com/automation-cloud" horizontal>
-    Our SaaS cloud offering
+    Unser SaaS-Cloud-Angebot
   </Card>
-  <Card title="Automation Cloud™ Dedicated" icon="cloud-arrow-up" href="/automation-cloud-dedicated/automation-cloud-dedicated/latest/admin-guide/data-security-and-compliance" horizontal>
-    Our premium SaaS cloud offering
+  <Card title="Automation Cloud™ Dedicated" icon="cloud-arrow-up" href="/de/automation-cloud-dedicated/automation-cloud-dedicated/latest/admin-guide/data-security-and-compliance" horizontal>
+    Unser Premium-SaaS-Cloud-Angebot
   </Card>
   <Card title="Automation Cloud™ Public Sector" icon="building" href="https://docs.uipath.com/automation-cloud-public-sector" horizontal>
-    Our Saas cloud offering for Public Sector
+    Unser Saas-Cloud-Angebot für den öffentlichen Sektor
   </Card>
   <Card title="Automation Suite" icon="server" href="https://docs.uipath.com/automation-suite" horizontal>
-    The cloud native platform, on-premises or in public cloud
+    Die cloudnative Plattform, lokal oder in der öffentlichen Cloud
   </Card>
-  <Card title="Autopilot" icon="robot" href="/autopilot/automation-cloud/latest/everyone-admin-guide/overview" horizontal>
-    Your partner for AI at work
+  <Card title="Autopilot" icon="robot" href="https://docs.uipath.com/autopilot" horizontal>
+    Ihr Partner für AI at Work
   </Card>
   <Card title="SDK" icon="code" href="https://docs.uipath.com/sdk" horizontal>
-    Developer resources for leveraging extensibility features within UiPath products
+    Entwicklerressourcen zur Nutzung von Erweiterungsfunktionen in UiPath-Produkten
   </Card>
-   <Card title="Customer Portal" icon="users" href="https://docs.uipath.com/customer-portal" horizontal>
-    Your central resource and support portal
+  <Card title="Customer Portal" icon="users" href="https://docs.uipath.com/customer-portal" horizontal>
+    Ihr zentrales Ressourcen- und Supportportal
   </Card>
   <Card title="Release Notes" icon="clipboard-list" href="https://docs.uipath.com/release-notes" horizontal>
     UiPath Platform Release Notes
   </Card>
+  <Card title="Maestro" icon="wand-magic-sparkles" href="https://docs.uipath.com/maestro" horizontal>
+    Verbessern Sie Ihre Prozesse durchgängig mit agentenbasierter Orchestrierung.
+  </Card>
+  <Card title="Test Cloud" icon="vial" href="https://docs.uipath.com/test-cloud" horizontal>
+    Softwaretests unterstützt durch intelligente Agenten
+  </Card>
+
 </CardGroup>
 
-<p className="text-gray-900 dark:text-white mb-2 mt-8" style={{ fontSize: '2rem', fontWeight: '600'}}>Discover</p>
-<CardGroup cols={3}>
-  <Card title="Automation Hub" icon="users" href="/automation-hub/automation-cloud/latest/user-guide/starting-as-the-account-owner" horizontal>
+<p className="text-gray-900 dark:text-white mb-10 mt-8" style={{ fontSize: '2rem', fontWeight: '600'}}>Discover</p>
+
+<CardGroup cols={4}>
+  <Card title="Automation Hub" icon="users" href="https://docs.uipath.com/automation-hub" horizontal>
     Crowdsource and manage your automation pipeline
   </Card>
   <Card title="Communications Mining™" icon="comment-dots" href="https://docs.uipath.com/communications-mining" horizontal>
     Mine, monitor, and automate every conversation
   </Card>
-  <Card title="Marketplace" icon="store" href="/marketplace/automation-cloud/latest/user-guide/publishing-guidelines-pick-up-in-demand-content" horizontal>
+  <Card title="Marketplace" icon="store" href="https://docs.uipath.com/marketplace" horizontal>
     Pre-built components
   </Card>
   <Card title="Process Mining" icon="chart-line" href="https://docs.uipath.com/process-mining" horizontal>
@@ -124,8 +131,9 @@ export function openSearch() {
   </Card>
 </CardGroup>
 
-<p className="text-gray-900 dark:text-white mb-2 mt-8" style={{ fontSize: '2rem', fontWeight: '600'}}>Automate</p>
-<CardGroup cols={3}>
+<p className="text-gray-900 dark:text-white mb-10 mt-8" style={{ fontSize: '2rem', fontWeight: '600'}}>Automatisieren</p>
+
+<CardGroup cols={4}>
   <Card title="Action Center" icon="bell" href="https://docs.uipath.com/action-center" horizontal>
     Where robots check in with you for direction
   </Card>
@@ -136,84 +144,87 @@ export function openSearch() {
     Enable inbound automation from other apps to UiPath
   </Card>
   <Card title="Agents" icon="wand-magic-sparkles" href="https://docs.uipath.com/agents" horizontal>
-    Start your agentic journey
+    Start your agent-based journey
   </Card>
-  <Card title="AI Center" icon="brain" href="https://docs.uipath.com/ai-center" horizontal>
-    Enhance automations with ML
+  <Card title="AI Center" icon="robot" href="https://docs.uipath.com/ai-center" horizontal>
+    Improve automation with ML
   </Card>
-  <Card title="AI Computer Vision" icon="eye" href="https://docs.uipath.com/ai-computer-vision" horizontal>
-    Human-like recognition and interaction with on-screen elements
+  <Card title="AI Computer Vision" icon="robot" href="https://docs.uipath.com/ai-computer-vision" horizontal>
+    Human-like detection and interaction with elements on the screen
   </Card>
-  <Card title="Apps" icon="window-maximize" href="https://docs.uipath.com/apps" horizontal>
-    Low-code automation app builder
+  <Card title="Apps" icon="robot" href="https://docs.uipath.com/apps" horizontal>
+    App-Generator für Low-Code-Automatisierung
   </Card>
-  <Card title="Assistant" icon="wand" href="https://docs.uipath.com/assistant" horizontal>
-    Your automation launchpad
+  <Card title="Assistant" icon="robot" href="https://docs.uipath.com/assistant" horizontal>
+    Ihr Launchpad für Automatisierung
   </Card>
-  <Card title="CICD integrations" icon="code-branch" href="https://docs.uipath.com/cicd-integrations" horizontal>
-    Integration components for third party CI/CD systems
+  <Card title="CICD-Integrationen" icon="robot" href="https://docs.uipath.com/cicd-integrations" horizontal>
+    Integrationskomponenten für CI/CD-Systeme von Drittanbietern
   </Card>
-  <Card title="Clipboard AI™" icon="clipboard" href="https://docs.uipath.com/clipboard-ai" horizontal>
-    Copy-paste assistant
+  <Card title="Clipboard AI™" icon="robot" href="https://docs.uipath.com/clipboard-ai" horizontal>
+    Assistent zum Kopieren und Einfügen
   </Card>
   <Card title="Data Service" icon="database" href="https://docs.uipath.com/data-service" horizontal>
-    No-code data modeling
+    Datenmodellierung ohne Code
   </Card>
   <Card title="Document Understanding™" icon="file-lines" href="https://docs.uipath.com/document-understanding" horizontal>
-    Extract info from documents, images, etc.
+    Extrahieren von Informationen aus Dokumenten, Bildern usw.
   </Card>
   <Card title="Integration Service" icon="plug-circle-bolt" href="https://docs.uipath.com/integration-service" horizontal>
-    UI and API integration within the same automation
+    UI- und API-Integration innerhalb derselben Automatisierung
   </Card>
   <Card title="IXP" icon="file-circle-check" href="https://docs.uipath.com/ixp" horizontal>
-    Our intelligent document processing offering
+    Unsere Lösung für intelligente Dokumentenverarbeitung
   </Card>
   <Card title="Robot" icon="robot" href="https://docs.uipath.com/robot" horizontal>
-    Your robot workforce
+    Ihre Roboter
   </Card>
   <Card title="Studio" icon="palette" href="https://docs.uipath.com/studio" horizontal>
-    Automation design canvas
+    Canvas für Automatisierungsentwurf
   </Card>
   <Card title="Studio Web" icon="globe" href="https://docs.uipath.com/studio-web" horizontal>
-    Start your automation journey
+    Starten Sie Ihre Automatisierungsreise
   </Card>
   <Card title="StudioX" icon="code" href="https://docs.uipath.com/studiox" horizontal>
-    For citizen developers
+    Für Citizen Developers
   </Card>
 </CardGroup>
+<
+<p className="text-gray-900 dark:text-white mb-10 mt-8" style={{ fontSize: '2rem', fontWeight: '600'}}>Operate</p>
 
-<p className="text-gray-900 dark:text-white mb-2 mt-8" style={{ fontSize: '2rem', fontWeight: '600'}}>Operate</p>
-<CardGroup cols={3}>
+<CardGroup cols={4}>
   <Card title="Automation Ops" icon="gears" href="https://docs.uipath.com/automation-ops" horizontal>
     Governence for automation
   </Card>
-  <Card title="High Availability Add-on" icon="server" href="https://docs.uipath.com/high-availability-add-on" horizontal>
-    Operate continuously without any failures or interruptions
+  <Card title="High Availability Add-on" icon="robot" href="https://docs.uipath.com/high-availability-add-on" horizontal>
+   Kontinuierlicher Betrieb ohne Ausfälle oder Unterbrechungen
   </Card>
   <Card title="Insights" icon="chart-line" href="https://docs.uipath.com/insights" horizontal>
-    Automation analytics
+    Automatisierungsanalyse
   </Card>
   <Card title="Orchestrator" icon="network-wired" href="https://docs.uipath.com/orchestrator" horizontal>
-    Manage your digital robots
+    Verwalten Ihrer digitalen Roboter
   </Card>
-  <Card title="Solutions Management" icon="box" href="https://docs.uipath.com/solutions-management" horizontal>
-    Create, configure, deploy, and transport solution packages
+  <Card title="Lösungen" icon="box" href="https://docs.uipath.com/solutions-management" horizontal>
+    Erstellen, Konfigurieren, Bereitstellen und Transportieren von Lösungspaketen
   </Card>
   <Card title="Test Manager" icon="clipboard-check" href="https://docs.uipath.com/test-manager" horizontal>
-    Manage tests
+    Tests verwalten
+  </Card>
+  <Card title="Test Suite™" icon="vial" href="https://docs.uipath.com/test-suite" horizontal>
+    Testen von Robotern und Anwendungen
   </Card>
 </CardGroup>
 
-
-<p className="text-gray-900 dark:text-white mb-2 mt-8" style={{ fontSize: '2rem', fontWeight: '600'}}>Resources</p>
+<br/>
 <CardGroup cols={3}>
-  <Card title="Support and Services" icon="message-question" href="https://docs.uipath.com/support">
+  <Card title="Support and Services" icon="message-question" href="https://docs.uipath.com/support" horizontal>
     Get The Help You Need
   </Card>
-  <Card title="UiPath Academy" icon="graduation-cap" href="https://docs.uipath.com/academy" >
+  <Card title="UiPath Academy" icon="graduation-cap" href="https://docs.uipath.com/academy" horizontal>
     Learning RPA - Automation Courses
   </Card>
-  <Card title="UiPath Forum" icon="users" href="https://docs.uipath.com/forum">
+  <Card title="UiPath Forum" icon="users" href="https://docs.uipath.com/forum" horizontal>
     UiPath Community Forum
   </Card>
 </CardGroup>

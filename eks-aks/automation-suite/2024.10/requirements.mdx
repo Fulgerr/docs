@@ -1,0 +1,19 @@
+---
+title: Prerequisites at a glance
+description: The following table lists the main hardware and software requirements for deploying Automation Suite on EKS/AKS .
+---
+
+
+| Component | Prerequisites |
+|-----------|---------------|
+| **Cluster** | AKS or EKS cluster<br/>See [Kubernetes version](). |
+| **Minimum node capacity** | 8 vCPU and 16 GB RAM |
+| **Total cluster capacity** | See [Capacity planning](). |
+| **Cache** | Redis |
+| **Registry** | OCI-compliant registry required in offline installations |
+| **SQL Server** | • Microsoft SQL Server 2017, 2019, and 2022; Standard and Enterprise editions<br/>• 8 (v-)CPU<br/>• 32 GB RAM<br/>• 256 GB SSD |
+| **Storage** | • Objectstore - Azure Blob, AWS S3, S3-compatible Objectstore<br/>• Block storage (StorageClass with replication for the Persistent Volume)<br/>• File system (StorageClass for workloads that do not require replication) |
+| **Networking** | Network policies, VNETs / VPCs, DNS, subnets, NSGs / security groups, NAT gateway, elastic IP and internet gateway |
+| **TLS** | 1.2 or 1.3 |
+| **Certificates** | The certificate for the FQDN to access Automation Suite |
+| **Proxy** | Only required for proxy configurations |

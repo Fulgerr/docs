@@ -1,118 +1,247 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "UiPath",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#fa4516",
+    "light": "#fa4516",
+    "dark": "#fa4516"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
+  "fonts": {
+    "body": {
+      "family": "Poppins"
+    },
+    "heading": {
+      "family": "Poppins"
+    }
+  },
+  "appearance": {
+    "default": "light"
+  },
+  "styling": {
+    "codeblocks" : "system"
+  },
   "navigation": {
-    "tabs": [
+    "languages": [
       {
-        "tab": "Guides",
-        "groups": [
+        "language": "en",
+        "dropdowns": [
           {
-            "group": "Get Started",
-            "pages": [
-              "index",
-              "quickstart",
-              "development"
+            "dropdown": "Home",
+            "icon": "house",
+            "tabs": [
+              {
+                "tab": "Home",
+                "pages": ["index"]
+              },
+              {
+                "tab": "Overview",
+                "groups": [
+                  {
+                    "group": " ",
+                    "pages": [
+                      "overview/other/latest"
+                    ]
+                  },
+                  {
+                    "group": "Introduction",
+                    "pages": [
+                      "overview/other/latest/overview/about-this-guide",
+                        {
+                          "group": "UiPath Product Accessibility Compliance",
+                          "pages": [
+                          "overview/other/latest/overview/uipath-product-accessibility-compliance",
+                          "overview/other/latest/overview/accessibility-conformance-report-acr"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Product Lifecycle",
+                    "pages": [
+                      "overview/other/latest/overview/release-strategy",
+                      "overview/other/latest/overview/classic-folders-removal"
+                    ]
+                  }
+                ]
+              }
             ]
           },
           {
-            "group": "Essentials",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Docs A",
-        "groups": [
-          {
-            "group": "Introduction to A",
-            "pages": [
-              "docsA/api-reference/introduction"
+            "dropdown": "Automation Hub",
+            "icon": "puzzle-piece",
+            "tabs": [
+              {
+                "tab": "Automation Suite",
+                "versions": [
+                  {
+                    "version": "2024.10",
+                    "anchors": [
+                        {
+                          "anchor": "User Guides",
+                          "icon": "book-open",
+                          "groups": [
+                            {
+                              "group": "Getting Started",
+                              "pages": [
+                                "automation-hub/automation-suite/2024.10/getting-started"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "anchor": "API Guide",
+                          "openapi": "/openapi.yaml",
+                          "icon": "code"
+                        }
+                      ]
+                  },
+                  {
+                    "version": "2023.10",
+                    "groups": [
+                      {
+                        "group": "Starting As",
+                        "pages": [
+                          {
+                            "group": "Starting as the System Admin",
+                            "pages": [
+                              "automation-hub/automation-suite/2023.10/starting-as-the-system-admin"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tab": "Automation Cloud",
+                "groups": [
+                  {
+                    "group": "Getting Started",
+                    "pages": [
+                      "automation-hub/automation-cloud/introduction"
+                    ]
+                  }
+                ]
+              }
             ]
           },
           {
-            "group": "Other Topics in A",
-            "pages": [
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API Reference",
-        "groups": [
-          {
-            "group": "API Documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint Examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+            "dropdown": "Automation Suite",
+            "icon": "wrench",
+            "tabs": [
+              {
+                "tab": "EKS/AKS Guide",
+                "versions": [
+                  {
+                    "version": "2024.10",
+                    "groups": [
+                      {
+                        "group": "Overview",
+                        "pages": [
+                          "eks-aks/automation-suite/2024.10/overview"
+                        ]
+                      },
+                      {
+                        "group": "Requirements",
+                        "pages": [
+                          "eks-aks/automation-suite/2024.10/requirements"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "version": "2023.10",
+                    "groups": [
+                      {
+                        "group": "Overview",
+                        "pages": [
+                          "eks-aks/automation-suite/2023.10/overview"
+                        ]
+                      },
+                      {
+                        "group": "Requirements",
+                        "pages": [
+                          "eks-aks/automation-suite/2023.10/requirements"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tab": "Linux Guide",
+                "versions": [
+                  {
+                    "version": "2024.10",
+                    "groups": [
+                      {
+                        "group": "Overview",
+                        "pages": [
+                          "linux/automation-suite/2024.10/overview"
+                        ]
+                      },
+                      {
+                        "group": "Requirements",
+                        "pages": [
+                          "linux/automation-suite/2024.10/requirements"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "version": "2023.10",
+                    "groups": [
+                      {
+                        "group": "Overview",
+                        "pages": [
+                          "linux/automation-suite/2023.10/overview"
+                        ]
+                      },
+                      {
+                        "group": "Requirements",
+                        "pages": [
+                          "linux/automation-suite/2023.10/requirements"
+                        ]
+                      }
+                    ]
+                  } 
+                ]
+              }
             ]
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "dark": "/logo/dark.svg",
+    "href": "https://www.uipath.com/"
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Sign in",
+        "href": "https://cloud.uipath.com/"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Try UiPath Free",
+      "href": "https://cloud.uipath.com/portal_/register?subscriptionPlan=std-trial"
     }
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "facebook": "https://facebook.com/uipath",
+      "linkedin": "https://www.linkedin.com/company/uipath",
+      "x": "https://twitter.com/uipath",
+      "youtube": "https://youtube.com/uipath",
+      "instagram": "https://www.instagram.com/uipathglobal/",
+      "slack": "https://www.uipath.com/developers/slack-community"
     }
   }
 }

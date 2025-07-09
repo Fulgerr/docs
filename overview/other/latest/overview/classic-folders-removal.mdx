@@ -1,0 +1,36 @@
+---
+title : "Classic folders removal"
+sidebarTitle : "Classic Folders Removal"
+---
+
+## Timeline
+
+These are the steps that we have taken towards removing classic folders and all their associated objects.
+
+**October 2021** - We announced the [deprecation](https://docs.uipath.com/overview/other/latest/overview/deprecation-timeline#deprecated-features-or-capabilities-2) of classic folders.
+
+**April 2022** - We announced the [removal](https://docs.uipath.com/overview/other/latest/overview/deprecation-timeline#upcoming-removals-3) of classic folders.
+
+**October 2022** - We launched a [wizard](https://docs.uipath.com/orchestrator/standalone/2022.10/user-guide/migrating-from-classic-folders-to-modern-folders) which assists in the migration of classic folder objects to modern folders, while keeping the existing structures and hierarchies.
+
+**April 2023** - We disabled executions in classic folders.
+
+**October 2023** - We removed classic folders altogether. See the **Orchestrator versions 2023.10 and above** section for details.
+
+## Orchestrator versions 2023.10 and above
+
+Classic folders and all their associated objects are removed.
+
+### Installing Orchestrator 2023.10
+
+Fresh installs are automatically free of classic objects.
+
+### Upgrading to Orchestrator 2023.10
+
+If you are planning on upgrading to this version, and your database contains any classic objects, the setup process stops with the following error message: `This Orchestrator version does not support Classic Folders and Classic                         Robots. Please migrate your installation to Modern Folders, delete your existing                         Classic Folders before upgrading.`
+
+As such, you must:
+
+- Download anything you might need from your existing classic folders.
+- [Migrate](https://docs.uipath.com/orchestrator/standalone/2023.4/user-guide/migrating-from-classic-folders-to-modern-folders) your classic folders to modern folders.
+- Delete all existing classic folders before starting the upgrade.

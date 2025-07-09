@@ -1,0 +1,29 @@
+---
+title: Importing your ideas
+description: You can import your ideas using two different methods depending on your needs.
+---
+
+## Using Import Pipeline
+- It's useful for a one time import only.
+- When you have ideas or want to update them with details applicable to: Overview Assessment and High Level Assessment.
+
+Check the [Import Your Pipeline](https://docs.uipath.com/automation-hub/automation-suite/2023.10/user-guide/import-your-pipeline) page to find out more.
+
+## Using OpenAPI
+- It's useful when you are importing ideas on a regular basis.
+- When you want to update ideas with details applicable to: Detailed Assessment, Citizen Delevoper Assessment, Change Request Assessment, Execution Assessment or Miscellaneous Assessment.
+
+## Submit an idea in Automation Hub via the Open API
+Submiting an idea in Automation Hub using two endpoints.
+
+1. Use the [Get Idea Schema](https://automation-hub.uipath.com/api/v1/api-doc/#/Customized%20Assessments/IdeaSchema) Endpoint.
+	- This one brings all the data about the fields from your assessment.
+	- You can tell it what assessment you want in the **`sourceType`** parameter.
+	- At the end of the API response, look for the **`user_inputs`** section.
+	- This section will provide you the exact structure you need for the Submit Idea API call.
+2. Use the [Post Idea From Schema Endpoint](https://automation-hub.uipath.com/api/v1/api-doc/#/Customized%20Assessments/IdeaFromSchema).
+	- This one has two main sections: **`user_inputs`** and **`source_type`.**
+	- For `**user_inputs**` , use the exact same structure you got from the previous call.
+	- It contains sample data, so make sure to update it with the data you need to submit.
+	- For the **`source_type`**, just use what you used as a source type in the initial call (COE, CD, etc).
+	Click the **Send** button and the idea is now created.

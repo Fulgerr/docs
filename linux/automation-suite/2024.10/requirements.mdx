@@ -1,0 +1,22 @@
+---
+title: High Availability - Three Availability Zones
+description: Kubernetes is designed to run a single cluster across multiple availability zones. To ensure resiliency against a zone failure, you can deploy critical components, including kubernetes and uipath product services, in High Availability (HA) mode.
+---
+
+HA mode requires at least three server nodes deployed in three distinct availability zones.
+
+<Info>
+Availability zones can be generalized as data centers. Clusters spanned across multiple data centers are more highly available than all availability zones in the same data centers.
+</Info>
+
+### Requirements
+To ensure HA with three availability zones, the following requirements must be met:
+
+- Three availability zones that are geographically separate but within close proximity;
+- Round Trip Time (RTT) among the availability zones must be minimal (`<10 ms RTT`);
+- All availability zones must provide a consistent set of resources with HA and redundancy;
+- Single virtual network span across all the availability zones.
+
+<Note>
+High Availability Add-On (HAA) is required for deploying Orchestrator in a three active availability zone topology on Automation Suite.
+</Note>
